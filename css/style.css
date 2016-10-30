@@ -1,0 +1,16 @@
+﻿body {
+    background: #000000;
+}
+
+.mainContainer{
+    background: #2f2f2f;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: #808080;
+}
+
+.button {
+    background-color: #a9a9a9;
+    border: 0px;
+    margin-left: 20px;
+}

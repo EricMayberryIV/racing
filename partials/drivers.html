@@ -1,0 +1,27 @@
+﻿<br/>
+<div class="container mainContainer">
+    <br />
+    <div class="col-xs-3 pull-right">
+        <input type="text" class="form-control" ng-model="nameFilter" placeholder="Search..." />
+    </div>
+    <div>
+        <table class="table">
+            <thead>
+                <tr><th colspan="4"><center><h3>2016 Formula 1 Drivers Championship Standings</h3></center></th></tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="driver in driversList | filter: searchFilter">
+                    <td>{{$index + 1}}</td>
+                    <td>
+                        <img src="img/flags/{{driver.Driver.nationality}}.png" />
+                        <a class="btn btn-default button" href="#/drivers/{{driver.Driver.driverId}}" role="button">
+                            {{driver.Driver.givenName}}&nbsp;{{driver.Driver.familyName}}
+                        </a>
+                    </td>
+                    <td>{{driver.Constructors[0].name}}</td>
+                    <td>{{driver.points}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
